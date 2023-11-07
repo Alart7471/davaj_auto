@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Davaj Davaj Garage</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+  <header>
+    <p style="text-align: center;letter-spacing: 1mm;font-size: xx-large; font-weight: bold;">{{welcome[choosedLang]}}</p>
+    <div style="display: flex; justify-content: center; width: 50%; margin: 0 auto;">
+      <a href="#services" style="margin-right: 10px;">{{uslugi[choosedLang]}}</a>
+      <a href="#about" style="margin-right: 10px;">{{about[choosedLang]}}</a>
+      <a href="#contact">{{contacts[choosedLang]}}</a>
+    </div>
+  </header>
+  <div id="language">
+    <div class="language-selector">
+      <span id="language">{{currentLanguage}}</span>
+    </div>
+  </div>
+  <div>
+    <a href="/izbor">{{href1[choosedLang]}}</a>
+  </div>
+
+  <div class="block_sections">
+  <section id="services">
+    <div class="block_uslugi">
+    <h2>{{our_uslugi[choosedLang]}}</h2>
+    <ul>
+      <div class="uslugi">{{our_uslugi1[choosedLang]}}</div>
+      <div class="uslugi">{{our_uslugi2[choosedLang]}}</div>
+      <div class="uslugi">{{our_uslugi3[choosedLang]}}</div>
+      <div class="uslugi">{{our_uslugi4[choosedLang]}}</div>
+    </ul>
+  </div>
+  </section>
+  
+  <section id="about">
+    <h2>{{about[choosedLang]}}</h2>
+    <p>{{about_text[choosedLang]}}</p>
+  </section>
+
+  <section id="contact">
+    <h2>{{contacts[choosedLang]}}</h2>
+    <p>{{adress[choosedLang]}}: <a href="https://maps.app.goo.gl/ETX9V2HY6UpWrrEn6?g_st=ic">Bulevar Milutina Milankovića 25b, Belgrade</a></p>
+    <p>{{tel[choosedLang]}}: +381621149018</p>
+    <p>Telegram: <a href="https://t.me/Autostrucnjak">@Autostrucnjak</a></p>
+  </section>
+
+  <section id="map">
+    <div class="container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1972.59888318177!2d20.3969482178076!3d44.81641370853909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a658009ea538b%3A0x5e3507b35e384eb1!2z0JHRg9C70LXQstCw0YAg0JzQuNC70YPRgtC40L3QsCDQnNC40LvQsNC90LrQvtCy0LjRm9CwIDI1Yiwg0JHQtdC-0LPRgNCw0LQgMTEwNzA!5e0!3m2!1sru!2srs!4v1699283604244!5m2!1sru!2srs" width="320" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+  </div>
+
+
+
+  <footer>
+    <p>{{footer[choosedLang]}}</p>
+  </footer>
+  </div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

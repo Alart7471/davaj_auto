@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Davaj Davaj Garage</title>
+  <link rel="stylesheet" href="ap.css">
+</head>
+<body>
+  <div id="app">
+  <header>
+    <p style="text-align: center;letter-spacing: 1mm;font-size: xx-large; font-weight: bold;">{{welcome[choosedLang]}}</p>
+    <div style="display: flex; justify-content: center; width: 50%; margin: 0 auto;">
+      <a href="#services" style="margin-right: 10px;">{{uslugi[choosedLang]}}</a>
+      <a href="#about" style="margin-right: 10px;">{{about[choosedLang]}}</a>
+      <a href="#contact">{{contacts[choosedLang]}}</a>
+    </div>
+  </header>
+  <div id="language">
+    <div class="language-selector">
+      <span id="language">{{currentLanguage}}</span>
+    </div>
+  </div>
+  <div>
+    <a href="/">AutoServis</a>
+  </div>
+
+
+
+
+
+  <footer>
+    <p>{{footer[choosedLang]}}</p>
+  </footer>
+  </div>
+  <script type="module" src="ap.js"></script>
+</body>
+</html>
