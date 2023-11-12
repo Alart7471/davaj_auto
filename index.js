@@ -2,7 +2,7 @@ import express from 'express';
 import path from 'path'
 import { fileURLToPath } from 'url'
 import { dirname } from 'path'
-// import mysql from 'mysql'
+import { createUserRequest } from './modules/db.js'
 
 const PORT = 8000;
 // const sql_password = ''
@@ -19,6 +19,14 @@ app.get('/', (req, res) =>{
 })
 app.get('/izbor', (req, res) =>{
   res.sendFile(path.resolve(__dirname, 'client', 'ap.html'))
+})
+app.get('/t', (req, res) =>{
+  res.sendFile(path.resolve(__dirname, 'client', 'logos.html'))
+})
+
+app.get('/api/createUserRequest', (req, res) => {
+  createUserRequest(req.query)
+  
 })
 
 app.listen(PORT, (err) => {
