@@ -2,7 +2,7 @@ import express from 'express';
 import path from 'path'
 import { fileURLToPath } from 'url'
 import { dirname } from 'path'
-import { createUserRequest } from './modules/db.js'
+import { createUserRequest, loadUserRequests } from './modules/db.js'
 
 const PORT = 8000;
 // const sql_password = ''
@@ -27,6 +27,11 @@ app.get('/t', (req, res) =>{
 app.get('/api/createUserRequest', (req, res) => {
   createUserRequest(req.query)
   
+})
+
+app.get('/api/getUserRequests', async (req, res) => {
+  let data = await loadUserRequests()
+  res.json(data)
 })
 
 app.listen(PORT, (err) => {

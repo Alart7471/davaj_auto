@@ -28,6 +28,9 @@ const app = new Vue({
             console.log(this.currentLanguage)
             this.currentLanguage = (this.currentLanguage === 'RU') ? 'SR' : 'RU';
             app.choosedLang = (app.choosedLang === 0) ? 1 : 0
+        },
+        routeToIzbor(){
+            window.location.href='/izbor';
         }
     },
     mounted() {

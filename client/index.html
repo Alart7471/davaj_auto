@@ -21,8 +21,11 @@
       <span id="language">{{currentLanguage}}</span>
     </div>
   </div>
-  <div>
+  <div class="in_dev">
     <a href="/izbor">{{href1[choosedLang]}}</a>
+  </div>
+  <div style="margin-top: 10px;">
+    <button @click="routeToIzbor" class="pages-btn">{{href1[choosedLang]}}</button>
   </div>
 
   <div class="block_sections">

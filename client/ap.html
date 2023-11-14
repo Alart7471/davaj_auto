@@ -10,23 +10,27 @@
   <div id="app">
   <header>
     <p style="text-align: center;letter-spacing: 1mm;font-size: xx-large; font-weight: bold;">{{welcome[choosedLang]}}</p>
-    <div style="display: flex; justify-content: center; width: 50%; margin: 0 auto;">
-      <a href="#services" style="margin-right: 10px;">{{uslugi[choosedLang]}}</a>
-      <a href="#about" style="margin-right: 10px;">{{about[choosedLang]}}</a>
-      <a href="#contact">{{contacts[choosedLang]}}</a>
-    </div>
   </header>
   <div id="language">
     <div class="language-selector">
       <span id="language">{{currentLanguage}}</span>
     </div>
   </div>
-  <div>
-    <a href="/">AutoServis</a>
+  <div class="in_dev">
+    <a href="/">{{href1[choosedLang]}}</a>
   </div>
 
-  
+  <div style="margin-top: 10px;">
+    <button @click="routeToMain" class="pages-btn">{{href1[choosedLang]}}</button>
+  </div>
 
+  <div class="about-section">
+    <h2>{{about_h[choosedLang]}}</h2>
+    <p>{{about_sec[choosedLang]}} - <span><a href="https://t.me/Autostrucnjak">@Autostrucnjak</a></span>
+    </p>
+  </div>
+  
+  <div class="in_dev">
   <p style="color: red;">
     #<br>
     Добавить модальное окно, которое показывало бы
@@ -70,17 +74,6 @@
         section checks
     </section>
     
-    <div class="zayavka">
-        <h4>Оставить заявку на подбор</h4>
-
-        <input v-model="inpt.name" type="text" name="" id="" placeholder="Имя">
-        <br>
-        <input  v-model="inpt.contact" type="text" name="" id="" placeholder="Контакт">
-        <br>
-        <input  v-model="inpt.msg" style="height: 20vh; width: 80%" type="text" name="" id="" placeholder="Опишите ваши пожелания, сроки и бюджет">
-        <br>
-        <button @click="tryToSendReq" style="margin-bottom: 15px;">Оставить заявку</button>
-    </div>
 
 
     <section class="test_section">
@@ -268,8 +261,19 @@
         </div>
     </section>
   </div>
+  </div>
 
+  <div class="zayavka">
+    <h4>{{zayavka_h[choosedLang]}}</h4>
 
+    <input style="margin-bottom: 10px;" v-model="inpt.name" type="text" name="" id="" :placeholder=zayavka_name[choosedLang]>
+    <br>
+    <input style="margin-bottom: 10px;" v-model="inpt.contact" type="text" name="" id="" :placeholder=zayavka_contact[choosedLang]>
+    <br>
+    <textarea v-model="inpt.msg" style="height: 20vh; width: 80%; margin-bottom: 10px;" :placeholder="zayavka_msg[choosedLang]"></textarea>
+    <br>
+    <button @click="tryToSendReq" style="margin-bottom: 15px;" class="pages-btn">{{zayavka_btn[choosedLang]}}</button>
+</div>
 
   <footer>
     <p>{{footer[choosedLang]}}</p>
