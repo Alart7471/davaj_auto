@@ -1,14 +1,14 @@
 import mysql from 'mysql'
 
-var pass = 'Chip.acro.pro12'
+var pass = '********************'
 
 export function createUserRequest(data){
     let query = 'insert into userRequests (type, name, contact, message, datetime, status) values (?, ?, ?, ?, NOW(), "step1");'
     const connection = mysql.createConnection({
         client:'mysql2',
-        host: "185.255.135.162",
-        user: "alartroot",
-        database: "autoservis1",
+        host: "********************",
+        user: "********************",
+        database: "********************",
         password: pass
     });
     
@@ -42,9 +42,9 @@ export function loadUserRequests() {
     return new Promise((resolve, reject) => {
     const connection = mysql.createConnection({
         client:'mysql2',
-        host: "185.255.135.162",
-        user: "alartroot",
-        database: "autoservis1",
+        host: "********************",
+        user: "********************",
+        database: "********************",
         password: pass
     });
     
