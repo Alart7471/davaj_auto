@@ -24,12 +24,12 @@ app.get('/t', (req, res) =>{
   res.sendFile(path.resolve(__dirname, 'client', 'logos.html'))
 })
 
-app.get('/api/createUserRequest', (req, res) => {
+app.get('/api/*', (req, res) => {
   createUserRequest(req.query)
   
 })
 
-app.get('/api/getUserRequests', async (req, res) => {
+app.get('/api/*', async (req, res) => {
   let data = await loadUserRequests()
   res.json(data)
 })
